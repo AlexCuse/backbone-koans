@@ -14,7 +14,7 @@
             message = item.message;
             
             stack = /js\/koans.+js:\d+/.exec(item.trace.stack);
-            stack = (stack != null && stack.length > 0) ? stack[0] : 'No line no found.';
+            stack = stack.length > 0 ? stack[0] : 'No line no found.';
             
             return message + ' <strong>-></strong> ' + stack;
         }
